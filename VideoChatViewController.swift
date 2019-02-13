@@ -122,6 +122,9 @@ class VideoChatViewController: UIViewController {
                                                                              frameRate: .fps15,
                                                                              bitrate: AgoraVideoBitrateStandard,
                                                                              orientationMode: .adaptative))
+        agoraKit.setChannelProfile(.liveBroadcasting)
+        agoraKit.setClientRole(.broadcaster)
+        agoraKit.enableWebSdkInteroperability(true)
     }
     
     func setupLocalVideo() {
